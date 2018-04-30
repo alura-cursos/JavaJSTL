@@ -31,16 +31,25 @@
 			<td width="20%">Remover?</td>
 		</tr>
 		<c:forEach var="p" items="${produtoList}">
-		
+
 			<tr id="produtos${p.id}">
 				<td>${p.nome}</td>
 				<td>${p.preco}</td>
 				<td>${p.descricao}</td>
 				<td>${p.dataInicioVenda.time}</td>
 
+				<c:choose>
+					<c:when test="${p.usado}">
+						<td>Sim</td>
+					</c:when>
+					<c:otherwise>
+						<td>Não</td>
+					</c:otherwise>
+				</c:choose>
+
 				<td><a href="#" onclick="return removeProduto(${p.id})">Remover</a></td>
 			</tr>
-	
+
 		</c:forEach>
 	</table>
 	<a href="/produtos/produto/formulario">Adicionar um produto</a>
