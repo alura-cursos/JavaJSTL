@@ -20,6 +20,7 @@
 	</script>
 
 	<h1>Produtos</h1>
+	<h2><fmt:message key="mensagem.bemvindo"/></h2>
 	<div id="mensagem"></div>
 	<table width="100%">
 		<tr>
@@ -57,6 +58,6 @@
 		</c:forEach>
 	</table>
 	<c:url value="/produto/formulario" var="urlAdicionar" />  
-	<a href="${urlAdicionar}">Adicionar um produto</a>
+	<a href="${urlAdicionar}"><fmt:message key="mensagem.novoProduto" /></a>
 </body>
 </html>
