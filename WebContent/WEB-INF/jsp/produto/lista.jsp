@@ -57,7 +57,11 @@
 
 		</c:forEach>
 	</table>
+	
 	<c:url value="/produto/formulario" var="urlAdicionar" />  
 	<a href="${urlAdicionar}"><fmt:message key="mensagem.novoProduto" /></a>
+	
+	<c:import url="../_comum/rodape.jsp"/>
+	
 </body>
 </html>
